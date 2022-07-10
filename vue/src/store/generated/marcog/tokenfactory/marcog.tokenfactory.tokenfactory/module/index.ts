@@ -4,15 +4,17 @@ import { StdFee } from "@cosmjs/launchpad";
 import { SigningStargateClient } from "@cosmjs/stargate";
 import { Registry, OfflineSigner, EncodeObject, DirectSecp256k1HdWallet } from "@cosmjs/proto-signing";
 import { Api } from "./rest";
+import { MsgUpdateOwner } from "./types/tokenfactory/tx";
 import { MsgCreateDenom } from "./types/tokenfactory/tx";
+import { MsgMintAndSendTokens } from "./types/tokenfactory/tx";
 import { MsgUpdateDenom } from "./types/tokenfactory/tx";
-import { MsgDeleteDenom } from "./types/tokenfactory/tx";
 
 
 const types = [
+  ["/marcog.tokenfactory.tokenfactory.MsgUpdateOwner", MsgUpdateOwner],
   ["/marcog.tokenfactory.tokenfactory.MsgCreateDenom", MsgCreateDenom],
+  ["/marcog.tokenfactory.tokenfactory.MsgMintAndSendTokens", MsgMintAndSendTokens],
   ["/marcog.tokenfactory.tokenfactory.MsgUpdateDenom", MsgUpdateDenom],
-  ["/marcog.tokenfactory.tokenfactory.MsgDeleteDenom", MsgDeleteDenom],
   
 ];
 export const MissingWalletError = new Error("wallet is required");
@@ -45,9 +47,10 @@ const txClient = async (wallet: OfflineSigner, { addr: addr }: TxClientOptions =
 
   return {
     signAndBroadcast: (msgs: EncodeObject[], { fee, memo }: SignAndBroadcastOptions = {fee: defaultFee, memo: ""}) => client.signAndBroadcast(address, msgs, fee,memo),
+    msgUpdateOwner: (data: MsgUpdateOwner): EncodeObject => ({ typeUrl: "/marcog.tokenfactory.tokenfactory.MsgUpdateOwner", value: MsgUpdateOwner.fromPartial( data ) }),
     msgCreateDenom: (data: MsgCreateDenom): EncodeObject => ({ typeUrl: "/marcog.tokenfactory.tokenfactory.MsgCreateDenom", value: MsgCreateDenom.fromPartial( data ) }),
+    msgMintAndSendTokens: (data: MsgMintAndSendTokens): EncodeObject => ({ typeUrl: "/marcog.tokenfactory.tokenfactory.MsgMintAndSendTokens", value: MsgMintAndSendTokens.fromPartial( data ) }),
     msgUpdateDenom: (data: MsgUpdateDenom): EncodeObject => ({ typeUrl: "/marcog.tokenfactory.tokenfactory.MsgUpdateDenom", value: MsgUpdateDenom.fromPartial( data ) }),
-    msgDeleteDenom: (data: MsgDeleteDenom): EncodeObject => ({ typeUrl: "/marcog.tokenfactory.tokenfactory.MsgDeleteDenom", value: MsgDeleteDenom.fromPartial( data ) }),
     
   };
 };
