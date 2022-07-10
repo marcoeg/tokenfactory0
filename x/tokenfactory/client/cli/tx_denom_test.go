@@ -23,7 +23,7 @@ func TestCreateDenom(t *testing.T) {
 	val := net.Validators[0]
 	ctx := val.ClientCtx
 
-	fields := []string{"xyz", "xyz", "111", "xyz", "111", "111", "false"}
+	fields := []string{"xyz", "xyz", "111", "xyz", "111", "false"}
 	for _, tc := range []struct {
 		desc    string
 		idDenom string
@@ -68,7 +68,7 @@ func TestUpdateDenom(t *testing.T) {
 	val := net.Validators[0]
 	ctx := val.ClientCtx
 
-	fields := []string{"xyz", "xyz", "111", "xyz", "111", "111", "false"}
+	fields := []string{"xyz", "xyz", "111", "false"}
 	common := []string{
 		fmt.Sprintf("--%s=%s", flags.FlagFrom, val.Address.String()),
 		fmt.Sprintf("--%s=true", flags.FlagSkipConfirmation),

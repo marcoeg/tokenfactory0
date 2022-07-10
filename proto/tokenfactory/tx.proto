@@ -8,7 +8,7 @@ option go_package = "github.com/marcog/tokenfactory/x/tokenfactory/types";
 
 // Msg defines the Msg service.
 service Msg {
-      rpc CreateDenom(MsgCreateDenom) returns (MsgCreateDenomResponse);
+  rpc CreateDenom(MsgCreateDenom) returns (MsgCreateDenomResponse);
   rpc UpdateDenom(MsgUpdateDenom) returns (MsgUpdateDenomResponse);
 // this line is used by starport scaffolding # proto/tx/rpc
 }
@@ -22,8 +22,7 @@ message MsgCreateDenom {
   int32 precision = 5;
   string url = 6;
   int32 maxSupply = 7;
-  int32 supply = 8;
-  bool canChangeMaxSupply = 9;
+  bool canChangeMaxSupply = 8;
 }
 message MsgCreateDenomResponse {}
 
@@ -32,12 +31,9 @@ message MsgUpdateDenom {
   string denom = 2;
 
   string description = 3;
-  string ticker = 4;
-  int32 precision = 5;
-  string url = 6;
-  int32 maxSupply = 7;
-  int32 supply = 8;
-  bool canChangeMaxSupply = 9;
+  string url = 4;
+  int32 maxSupply = 5;
+  bool canChangeMaxSupply = 6;
 }
 message MsgUpdateDenomResponse {}
 
