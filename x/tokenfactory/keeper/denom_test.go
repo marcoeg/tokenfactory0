@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	keepertest "github.com/marcog/tokenfactory/testutil/keeper"
-	"github.com/marcog/tokenfactory/testutil/nullify"
-	"github.com/marcog/tokenfactory/x/tokenfactory/keeper"
-	"github.com/marcog/tokenfactory/x/tokenfactory/types"
+	keepertest "github.com/marcoeg/tokenfactory/testutil/keeper"
+	"github.com/marcoeg/tokenfactory/testutil/nullify"
+	"github.com/marcoeg/tokenfactory/x/tokenfactory/keeper"
+	"github.com/marcoeg/tokenfactory/x/tokenfactory/types"
 	"github.com/stretchr/testify/require"
 )
 

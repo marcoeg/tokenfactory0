@@ -3,8 +3,8 @@ package keeper_test
 import (
 	"testing"
 
-	testkeeper "github.com/marcog/tokenfactory/testutil/keeper"
-	"github.com/marcog/tokenfactory/x/tokenfactory/types"
+	testkeeper "github.com/marcoeg/tokenfactory/testutil/keeper"
+	"github.com/marcoeg/tokenfactory/x/tokenfactory/types"
 	"github.com/stretchr/testify/require"
 )
 

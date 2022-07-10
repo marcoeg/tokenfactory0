@@ -6,8 +6,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
-	"github.com/marcog/tokenfactory/x/tokenfactory/keeper"
-	"github.com/marcog/tokenfactory/x/tokenfactory/types"
+	"github.com/marcoeg/tokenfactory/x/tokenfactory/keeper"
+	"github.com/marcoeg/tokenfactory/x/tokenfactory/types"
 )
 
 func SimulateMsgMintAndSendTokens(

@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/marcog/tokenfactory/x/tokenfactory/types"
+	"github.com/marcoeg/tokenfactory/x/tokenfactory/types"
 )
 
 type msgServer struct {

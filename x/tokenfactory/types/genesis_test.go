@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/marcog/tokenfactory/x/tokenfactory/types"
+	"github.com/marcoeg/tokenfactory/x/tokenfactory/types"
 	"github.com/stretchr/testify/require"
 )
 

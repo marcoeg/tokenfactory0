@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	"github.com/marcog/tokenfactory/testutil/sample"
+	"github.com/marcoeg/tokenfactory/testutil/sample"
 	"github.com/stretchr/testify/require"
 )
 

@@ -10,9 +10,9 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	keepertest "github.com/marcog/tokenfactory/testutil/keeper"
-	"github.com/marcog/tokenfactory/testutil/nullify"
-	"github.com/marcog/tokenfactory/x/tokenfactory/types"
+	keepertest "github.com/marcoeg/tokenfactory/testutil/keeper"
+	"github.com/marcoeg/tokenfactory/testutil/nullify"
+	"github.com/marcoeg/tokenfactory/x/tokenfactory/types"
 )
 
 // Prevent strconv unused error
