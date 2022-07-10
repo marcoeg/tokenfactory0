@@ -10,7 +10,6 @@ option go_package = "github.com/marcog/tokenfactory/x/tokenfactory/types";
 service Msg {
       rpc CreateDenom(MsgCreateDenom) returns (MsgCreateDenomResponse);
   rpc UpdateDenom(MsgUpdateDenom) returns (MsgUpdateDenomResponse);
-  rpc DeleteDenom(MsgDeleteDenom) returns (MsgDeleteDenomResponse);
 // this line is used by starport scaffolding # proto/tx/rpc
 }
 
@@ -41,11 +40,5 @@ message MsgUpdateDenom {
   bool canChangeMaxSupply = 9;
 }
 message MsgUpdateDenomResponse {}
-
-message MsgDeleteDenom {
-  string owner = 1;
-  string denom = 2;
-}
-message MsgDeleteDenomResponse {}
 
 // this line is used by starport scaffolding # proto/tx/message
